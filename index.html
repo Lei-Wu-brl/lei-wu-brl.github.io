@@ -3,14 +3,69 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>SoftBioX Lab — Coming Soon</title>
+  <title>SoftBioX Lab</title>
+  <style>
+    body { font-family: system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin: 0; line-height: 1.6; }
+    header { background: #f8f8f8; padding: 1rem 2rem; position: sticky; top: 0; display: flex; justify-content: space-between; align-items: center; }
+    nav a { margin-left: 1rem; text-decoration: none; color: #333; }
+    nav a:hover { text-decoration: underline; }
+    section { padding: 3rem 2rem; max-width: 900px; margin: auto; }
+    h1, h2 { margin-top: 0; }
+    .hero { background: #eef3f7; text-align: center; padding: 5rem 2rem; }
+    .hero h1 { font-size: 2rem; margin-bottom: 1rem; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+    .card { background: #f8f8f8; padding: 1rem; border-radius: 8px; }
+    footer { background: #f1f1f1; padding: 1rem 2rem; text-align: center; font-size: 0.9rem; color: #555; }
+  </style>
 </head>
-<body style="font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:720px;margin:8vh auto;padding:0 20px;line-height:1.6">
+<body>
+
+<header>
+  <div><strong>SoftBioX Lab</strong></div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
   <h1>SoftBioX Lab</h1>
   <p><em>Crossing Soft Robotics and Biomedical Engineering.</em></p>
-  <p>SoftBioX Lab explores the interface between soft robotics, biomaterials, and medical engineering to create adaptive systems for healthcare.</p>
-  <p>We focus on developing adaptive material–structure systems through advanced fabrication strategies, bridging engineering innovation with clinical translation.</p>
-  <p>Contact: <a href="mailto:youremail@example.com">lei.wu@bristol.ac.uk</a></p>
+  <p>We explore the interface between soft robotics, biomaterials, and medical engineering to create adaptive systems for healthcare.</p>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <p>SoftBioX Lab is dedicated to advancing soft robotic systems and bio-materials for clinical translation. We develop adaptive material–structure platforms using novel fabrication techniques such as hydrogel entanglement, 3D inverse printing, and photoresponsive elastomers.</p>
+</section>
+
+<section id="research">
+  <h2>Research</h2>
+  <div class="cards">
+    <div class="card"><h3>Highly Entangled Hydrogels</h3><p>Soft actuators & GI tract phantoms.</p></div>
+    <div class="card"><h3>Photoresponsive PU Elastomers</h3><p>Light-driven contractile systems.</p></div>
+    <div class="card"><h3>Interpenetrating Elastomer Networks</h3><p>Paediatric airway stents & EB wound dressings.</p></div>
+    <div class="card"><h3>Adaptive Bio-interfaces</h3><p>Materials–tissue interaction platforms.</p></div>
+  </div>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+  <p>Wu L.*, Song W., Rossiter J.M. et al. <strong>A bespoke interpenetrating elastomer network composite laryngeal stent for expedited paediatric laryngotracheal reconstruction</strong>. <em>Adv. Funct. Mater.</em>, 2024. <a href="#">DOI</a></p>
+  <p>Wu L.*, et al. <strong>Photoresponsive polyurethane nanofiber scaffolds for dynamic muscle-on-chip</strong>. <em>Journal of Materials Chemistry A</em>, 2025. <a href="#">DOI</a></p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:lei.wu@bristol.ac.uk">lei.wu@bristol.ac.uk</a></p>
+  <p>Website: <a href="https://www.softbiox.org">www.softbiox.org</a></p>
+</section>
+
+<footer>
+  © 2025 SoftBioX Lab. All rights reserved.
+</footer>
+
 </body>
 </html>
-
