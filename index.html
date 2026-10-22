@@ -3,26 +3,56 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>SoftBioX Lab</title>
+  <title>Lei Wu | SoftBioX</title>
+  <meta name="description" content="Lei Wu — research in soft robotics, hydrogels, responsive materials and biomedical engineering.">
   <style>
-    body { font-family: system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin: 0; line-height: 1.6; }
-    header { background: #f8f8f8; padding: 1rem 2rem; position: sticky; top: 0; display: flex; justify-content: space-between; align-items: center; }
-    nav a { margin-left: 1rem; text-decoration: none; color: #333; }
-    nav a:hover { text-decoration: underline; }
-    section { padding: 3rem 2rem; max-width: 900px; margin: auto; }
-    h1, h2 { margin-top: 0; }
-    .hero { background: #eef3f7; text-align: center; padding: 5rem 2rem; }
-    .hero h1 { font-size: 2rem; margin-bottom: 1rem; }
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
-    .card { background: #f8f8f8; padding: 1rem; border-radius: 8px; }
-    footer { background: #f1f1f1; padding: 1rem 2rem; text-align: center; font-size: 0.9rem; color: #555; }
+    :root { color-scheme: light; --ink:#183247; --accent:#146b70; }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 7rem; }
+    body { font-family: system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin:0; line-height:1.7; color:var(--ink); background:#fff; }
+    a { color:var(--accent); text-underline-offset: .2em; overflow-wrap:anywhere; }
+    a:hover { text-decoration-thickness:2px; }
+    a:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+    header { background:#fff; padding:1rem max(1.25rem, calc((100% - 1000px)/2)); position:sticky; top:0; z-index:2; display:flex; justify-content:space-between; align-items:center; gap:1rem; border-bottom:1px solid #dce5e9; }
+    .brand { text-decoration:none; color:var(--ink); white-space:nowrap; }
+    nav { display:flex; flex-wrap:wrap; gap:.5rem 1.2rem; }
+    nav a { text-decoration:none; font-size:.94rem; }
+    nav a:hover { text-decoration:underline; }
+    section { padding:3rem 1.5rem; max-width:1000px; margin:auto; }
+    h1,h2,h3 { line-height:1.25; }
+    h1,h2 { margin-top:0; }
+    h2 { font-size:1.65rem; }
+    h3 { font-size:1.12rem; }
+    .hero { max-width:none; background:#eef3f7; text-align:center; padding:4.5rem 1.5rem; }
+    .hero h1 { font-size:clamp(2.3rem,6vw,3.5rem); margin-bottom:.5rem; letter-spacing:-.04em; }
+    .hero p { max-width:680px; margin:1rem auto; }
+    .eyebrow { text-transform:uppercase; letter-spacing:.16em; font-size:.8rem; font-weight:700; color:var(--accent); }
+    .links { display:flex; justify-content:center; flex-wrap:wrap; gap:.75rem 1.5rem; }
+    .cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+    .card { background:#f4f7f8; padding:1.3rem; border-radius:8px; border-top:3px solid #a8c8cb; }
+    .card h3 { margin-top:0; }
+    .card p { margin-bottom:0; }
+    .year { margin-top:2rem; color:var(--accent); }
+    .publications { padding-left:1.5rem; }
+    .publications li { padding:.8rem 0 1rem .35rem; border-bottom:1px solid #e4eaed; }
+    .paper-title { display:block; font-weight:650; text-decoration:none; color:var(--ink); line-height:1.5; margin:.25rem 0; }
+    .paper-title:hover { color:var(--accent); text-decoration:underline; }
+    .authors,.note { color:#526574; font-size:.9rem; }
+    .note { display:block; }
+    #contact { border-top:1px solid #dce5e9; }
+    footer { background:#f4f7f8; padding:1.5rem; text-align:center; font-size:.9rem; color:#526574; }
+    .skip { position:absolute; left:1rem; top:-10rem; padding:.5rem 1rem; background:white; z-index:5; }
+    .skip:focus { top:1rem; }
+    @media(max-width:600px) { header { position:static; flex-direction:column; align-items:flex-start; padding:1rem 1.25rem; } nav { gap:.5rem 1rem; } section { padding:2.5rem 1.25rem; } .hero { padding:3rem 1.25rem; } .cards { grid-template-columns:1fr; } html { scroll-padding-top:1rem; } }
+    @media print { header, .skip { display:none; } section,.hero { padding:1rem 0; } .card,li { break-inside:avoid; } }
   </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <header>
-  <div><strong>SoftBioX Lab</strong></div>
-  <nav>
+  <a class="brand" href="#main"><strong>SoftBioX</strong> · Lei Wu</a>
+  <nav aria-label="Main navigation">
     <a href="#about">About</a>
     <a href="#research">Research</a>
     <a href="#publications">Publications</a>
@@ -30,131 +60,80 @@
   </nav>
 </header>
 
-<section class="hero">
-  <h1>SoftBioX Lab</h1>
-  <p><em>Crossing Soft Robotics and Biomedical Engineering.</em></p>
-  <p>We explore the interface between soft robotics, biomaterials, and medical engineering to create adaptive systems for healthcare.</p>
+<main id="main">
+<section class="hero" aria-labelledby="intro-title">
+  <p class="eyebrow">SoftBioX · Personal research website</p>
+  <h1 id="intro-title">Lei Wu</h1>
+  <p><strong>Research Associate · University of Bristol</strong></p>
+  <p>Exploring the interface between soft robotics, responsive materials and biomedical engineering.</p>
+  <div class="links"><a href="#research">Research interests</a><a href="#publications">Publications</a><a href="https://scholar.google.com/citations?user=TrzvK3gAAAAJ&amp;hl=en">Google Scholar</a></div>
 </section>
-
 <section id="about">
   <h2>About</h2>
-  <p>SoftBioX Lab is dedicated to advancing soft robotic systems and bio-materials for clinical translation. We develop adaptive material–structure platforms using novel fabrication techniques such as hydrogel entanglement, 3D inverse printing, and photoresponsive elastomers.</p>
+  <p>I am a Research Associate at the University of Bristol, working in soft robotics and biomedical engineering. My research spans hydrogels, responsive elastomers and biohybrid systems, exploring how material design and fabrication can enable soft actuation and biomedical applications.</p>
+  <p>SoftBioX brings together my research interests and publications across these areas.</p>
 </section>
 
 <section id="research">
   <h2>Research</h2>
   <div class="cards">
-    <div class="card"><h3>Highly Entangled Hydrogels</h3><p>Soft actuators & GI tract phantoms.</p></div>
-    <div class="card"><h3>Photoresponsive PU Elastomers</h3><p>Light-driven contractile systems.</p></div>
-    <div class="card"><h3>Interpenetrating Elastomer Networks</h3><p>Paediatric airway stents & EB wound dressings.</p></div>
-    <div class="card"><h3>Adaptive Bio-interfaces</h3><p>Materials–tissue interaction platforms.</p></div>
+    <div class="card"><h3>Highly Entangled Hydrogels</h3><p>Hydrogel design and fabrication for soft hydraulic actuation.</p></div>
+    <div class="card"><h3>Photoresponsive PU Elastomers</h3><p>Light-responsive materials and biohybrid muscle actuation.</p></div>
+    <div class="card"><h3>Interpenetrating Elastomer Networks</h3><p>Programmable soft materials for paediatric airway stents.</p></div>
+    <div class="card"><h3>Adaptive Bio-interfaces</h3><p>Scaffolds and material platforms for tissue engineering.</p></div>
   </div>
 </section>
 
 <section id="publications">
   <h2>Publications</h2>
-  <p>Wu L.*, Song W. et al. <strong>A bespoke interpenetrating elastomer network composite laryngeal stent for expedited paediatric laryngotracheal reconstruction</strong>. <em>Adv. Funct. Mater.</em>, 2025. <a href="#">DOI</a></p>
-  <p>Wu L.* et al. <strong>Photoresponsive polyurethane nanofiber scaffolds for dynamic muscle-on-chip</strong>. <em>Royal Society Interface Focus</em>, 2025. <a href="#">DOI</a></p>
-  <p>Wu L., Song W.* et al. <strong>Tunable Light-Responsive Polyurethane-urea Elastomer Driven by Photochemical and Photothermal Coupling Mechanism</strong>. <em>ACS Applied Materials & Interfaces</em>, 2024. <a href="#">DOI</a></p>
-
-  <p>
-    Zhao, Shudong; <strong>Lei Wu</strong>; Tayari, Sara; Li, … 
-    <strong>A digitally programmable 3D microenvironment directs satellite cell …</strong>.
-    <em>Biomaterials</em>, 2025, 305: 123701.
-    DOI: <a href="https://doi.org/10.1016/j.biomaterials.2025.123701">10.1016/j.biomaterials.2025.123701</a>.
-  </p>
-
-  <p>
-    Chang, Jinke; Maltby, Thomas; Moineddini, Amirbahador; Shi, Daqian; <strong>Lei Wu</strong>; Chen, Jishizhan; Yu, Jianshu; Hung, Jeffrey; Viola, Giuseppe; Vilches, Antonio; Song, Wenhui; <em>et al.</em>
-    <strong>Piezoelectric nanofiber–based intelligent hearing system</strong>. <em>Science Advances</em>, 2025, 11(19): eadl2741.
-    DOI: <a href="https://doi.org/10.1126/sciadv.adl2741">10.1126/sciadv.adl2741</a>.
-  </p>
-
-  <p>
-    <strong>Lei Wu</strong>; Huang, Xia; Wang, Meng; Chen, Jishizhan; Chang, Jinke; Zhang, Han; Zhang, Xuetong; Conn, Andrew; Rossiter, Jonathan; Birchall, Martin; Song, Wenhui.
-    <strong>Tunable Light-Responsive Polyurethane-urea Elastomer Driven by Photochemical and Photothermal Coupling Mechanism</strong>.
-    <em>ACS Applied Materials & Interfaces</em>, 2024.
-    DOI: <a href="https://doi.org/10.1021/acsami.4c00486">10.1021/acsami.4c00486</a>.
-    Corresponding: Wenhui Song.
-  </p>
-
-  <p>
-    Cheesbrough, Aimee; Harley, Peter; Riccio, Federica; <strong>Lei Wu</strong>; Song, Wenhui; Lieberam, Ivo.
-    <strong>A scalable human iPSC-based neuromuscular disease model on suspended biobased elastomer nanofiber scaffolds</strong>.
-    <em>Biofabrication</em>, 2023, 15: 045020.
-    DOI: <a href="https://doi.org/10.1088/1758-5090/acf39e">10.1088/1758-5090/acf39e</a>.
-    Corresponding: Wenhui Song; Ivo Lieberam.
-  </p>
-
-  <p>
-    Shigeta, Yusuke; Saleh, Tarek; Benedetti, Giada; Caciolli, Lorenzo; Khalaf, Sahira; Giobbe, Giovanni G.; De Coppi, Paolo; Chang, Jinke; Zambaiti, Elisa; <strong>Lei Wu</strong>; Khalaf, Sahira; Song, Wulei; <em>et al.</em>
-    <strong>Stomach engineering: region-specific characterization of the decellularized porcine stomach</strong>.
-    <em>Pediatric Surgery International</em>, 2023, 40: 13.
-    DOI: <a href="https://doi.org/10.1007/s00383-023-05591-y">10.1007/s00383-023-05591-y</a>.
-    Corresponding: Giovanni G. Giobbe; Paolo De Coppi.
-  </p>
-
-  <p>
-    Zhao, Shudong; Chen, Jishizhan; <strong>Lei Wu</strong>; Tao, Xin; Yaqub, Naheem; Chang, Jinke.
-    <strong>Induced Pluripotent Stem Cells for Tissue-Engineered Skeletal Muscles</strong>.
-    <em>International Journal of Molecular Sciences</em>, 2023, 24(14): 11520.
-    DOI: <a href="https://doi.org/10.3390/ijms241411520">10.3390/ijms241411520</a>.
-  </p>
-
-  <p>
-    Hu, Xiaocheng; Nian, Guodong; Liang, Xueya; <strong>Lei Wu</strong>; Yin, Tenghao; Lu, Haotian; Qu, Shaoxing; Yang, Wei.
-    <strong>Adhesive Tough Magnetic Hydrogels with High Fe<sub>3</sub>O<sub>4</sub> Content</strong>.
-    <em>ACS Applied Materials & Interfaces</em>, 2019, 11(10): 10292-10300.
-    DOI: <a href="https://doi.org/10.1021/acsami.8b20937">10.1021/acsami.8b20937</a>.
-  </p>
-
-  <p>
-    Yin, Tenghao; <strong>Lei Wu</strong>; Wu, Tonghao; Mao, Guoyong; Nian, Guodong; Chen, Zheng; Hu, Xiaocheng; Wang, Peng; Xiang, Yong; Yu, Hu; Qu, Shaoxing; Yang, Wei.
-    <strong>Ultrastretchable and conductive core/sheath hydrogel fibers with multifunctionality</strong>.
-    <em>Journal of Polymer Science Part B: Polymer Physics</em>, 2019, 57(5): 272-280.
-    DOI: <a href="https://doi.org/10.1002/polb.24781">10.1002/polb.24781</a>.
-    Corresponding: Shaoxing Qu.
-  </p>
-
-  <p>
-    <strong>Lei Wu</strong>; Mao, Guoyong; Nian, Guodong; Xiang, Yong; Qian, Jin; Qu, Shaoxing.
-    <strong>Mechanical characterization and modeling of sponge-reinforced hydrogels</strong>.
-    <em>Soft Matter</em>, 2018, 14: 5531-5541.
-    DOI: <a href="https://doi.org/10.1039/C8SM00678D">10.1039/C8SM00678D</a>.
-    Corresponding: Jin Qian; Shaoxing Qu.
-  </p>
-
-  <p>
-    Mao, Guoyong; <strong>Lei Wu</strong>; Fu, Yimou; Liu, Jun; Qu, Shaoxing.
-    <strong>Design and Characterization of a Soft Dielectric Elastomer Peristaltic Pump</strong>.
-    <em>IEEE/ASME Transactions on Mechatronics</em>, 2018, 23(6): 2699-2709.
-    DOI: <a href="https://doi.org/10.1109/TMECH.2018.2864252">10.1109/TMECH.2018.2864252</a>.
-  </p>
-
-  <p>
-    Mao, Guoyong; <strong>Lei Wu</strong>; Fu, Yimou; Liu, Jun; Qu, Shaoxing.
-    <strong>Voltage-controlled radial wrinkles of a trumpet-like dielectric elastomer</strong>.
-    <em>AIP Advances</em>, 2018, 8: 015118.
-    DOI: <a href="https://doi.org/10.1063/1.5021028">10.1063/1.5021028</a>.
-  </p>
-
-  <p>
-    Mao, Guoyong; <strong>Lei Wu</strong>; Liang, Xueya; Qu, Xueya?; <em>et al.</em>
-    <strong>Morphology of voltage-triggered ordered wrinkles of a dielectric elastomer</strong>.
-    <em>Journal of Applied Mechanics</em>, 2017, 84(12): 121008.
-    DOI: <a href="https://doi.org/10.1115/1.4037833">10.1115/1.4037833</a>.
-  </p>
-
+  <p>Journal articles and conference papers, listed by publication year. Author lists are abbreviated where indicated; follow the title to the publisher’s record.</p>
+<h3 class="year">2026</h3><ol class="publications">
+<li><span class="authors">Naghavi Zadeh, M.; <strong>Wu, L.</strong>; et al.</span><a class="paper-title" href="https://doi.org/10.1109/RoboSoft67810.2026.11522823">An implantable soft robotic concept and simulator for female stress urinary incontinence treatment</a><em>IEEE RoboSoft</em> · 2026 · Conference</li>
+<li><span class="authors"><strong>Wu, L.</strong>; Chen, Y.; Yue, T.; He, L.; Rossiter, J.</span><a class="paper-title" href="https://doi.org/10.1109/RoboSoft67810.2026.11522912">3D-Printed highly entangled hydrogels for strong, fast and fatigue-resistant soft hydraulic actuators</a><em>IEEE RoboSoft</em> · 2026 · Conference</li>
+<li><span class="authors"><strong>Wu, L.</strong>; Huang, X.; et al.</span><a class="paper-title" href="https://doi.org/10.1098/rsfs.2025.0053">Dual-photoresponsive elastomer nanofibres enhanced myofibre hybrid for skeletal muscle actuation</a><em>Interface Focus</em> · 2026 · Journal</li>
+<li><span class="authors">Li, Z.; <strong>Wu, L.</strong>; Rossiter, J.</span><a class="paper-title" href="https://doi.org/10.1098/rsfs.2025.0049">Stretchable and conductive PAAm@PPy hydrogels with low hysteresis for strain sensing</a><em>Interface Focus</em> · 2026 · Journal</li>
+<li><span class="authors">Durkin, N.; et al. (including <strong>Wu, L.</strong>)</span><a class="paper-title" href="https://doi.org/10.1038/s41587-026-03043-1">Functional integration of an autologous engineered esophagus in a large-animal model</a><em>Nature Biotechnology</em> · 2026 · Journal</li>
+<li><span class="authors">Zhao, S.; <strong>Wu, L.</strong>; et al.</span><a class="paper-title" href="https://doi.org/10.1016/j.biomaterials.2025.123701">A digitally programmable 3D microenvironment directs satellite cell function</a><em>Biomaterials</em> · 2026 · Journal<span class="note">First published online in 2025.</span></li>
+<li><span class="authors">Maughan, E. F.; <strong>Wu, L.</strong>; et al.</span><a class="paper-title" href="https://doi.org/10.1002/adfm.202513861">A Bespoke Programmable Interpenetrating Elastomer Network Composite Laryngeal Stent for Expedited Paediatric Laryngotracheal Reconstruction</a><em>Advanced Functional Materials</em> · 2026 · Journal<span class="note">First published online in 2025.</span></li>
+</ol>
+<h3 class="year">2025</h3><ol class="publications">
+<li><span class="authors">Gabrie, J.; Lee, C.; <strong>Wu, L.</strong>; et al.</span><a class="paper-title" href="https://doi.org/10.1177/21695172251404160">Systematic Review: Sterilization Techniques for Emerging Soft Robotics Used in Health Care Applications</a><em>Soft Robotics</em> · 2025 · Journal</li>
+<li><span class="authors">Chang, J.; et al. (including <strong>Wu, L.</strong>)</span><a class="paper-title" href="https://doi.org/10.1126/sciadv.adl2741">Piezoelectric nanofiber–based intelligent hearing system</a><em>Science Advances</em> · 2025 · Journal</li>
+</ol>
+<h3 class="year">2024</h3><ol class="publications">
+<li><span class="authors"><strong>Wu, L.</strong>; Huang, X.; et al.</span><a class="paper-title" href="https://doi.org/10.1021/acsami.4c00486">Tunable Light-Responsive Polyurethane-urea Elastomer Driven by Photochemical and Photothermal Coupling Mechanism</a><em>ACS Applied Materials &amp; Interfaces</em> · 2024 · Journal</li>
+<li><span class="authors">Shigeta, Y.; et al. (including <strong>Wu, L.</strong>)</span><a class="paper-title" href="https://doi.org/10.1007/s00383-023-05591-y">Stomach engineering: region-specific characterization of the decellularized porcine stomach</a><em>Pediatric Surgery International</em> · 2024 · Journal<span class="note">First published online in 2023.</span></li>
+</ol>
+<h3 class="year">2023</h3><ol class="publications">
+<li><span class="authors">Zhao, S.; Chen, J.; <strong>Wu, L.</strong>; et al.</span><a class="paper-title" href="https://doi.org/10.3390/ijms241411520">Induced Pluripotent Stem Cells for Tissue-Engineered Skeletal Muscles</a><em>International Journal of Molecular Sciences</em> · 2023 · Journal</li>
+<li><span class="authors">Cheesbrough, A.; Harley, P.; Riccio, F.; <strong>Wu, L.</strong>; Song, W.; Lieberam, I.</span><a class="paper-title" href="https://doi.org/10.1088/1758-5090/acf39e">A scalable human iPSC-based neuromuscular disease model on suspended biobased elastomer nanofiber scaffolds</a><em>Biofabrication</em> · 2023 · Journal</li>
+</ol>
+<h3 class="year">2020</h3><ol class="publications">
+<li><span class="authors">Yiming, B.; <strong>Wu, L.</strong>; et al.</span><a class="paper-title" href="https://doi.org/10.1002/adfm.201909473">Highly Stretchable Bilayer Lattice Structures That Elongate via In-Plane Deformation</a><em>Advanced Functional Materials</em> · 2020 · Journal</li>
+</ol>
+<h3 class="year">2019</h3><ol class="publications">
+<li><span class="authors">Yin, T.; <strong>Wu, L.</strong>; et al.</span><a class="paper-title" href="https://doi.org/10.1002/polb.24781">Ultrastretchable and conductive core-sheath hydrogel fibers with multifunctionality</a><em>Journal of Polymer Science Part B: Polymer Physics</em> · 2019 · Journal</li>
+<li><span class="authors">Hu, X.; Nian, G.; Liang, X.; <strong>Wu, L.</strong>; et al.</span><a class="paper-title" href="https://doi.org/10.1021/acsami.8b20937">Adhesive Tough Magnetic Hydrogels with High Fe3O4 Content</a><em>ACS Applied Materials &amp; Interfaces</em> · 2019 · Journal</li>
+</ol>
+<h3 class="year">2018</h3><ol class="publications">
+<li><span class="authors"><strong>Wu, L.</strong>; Mao, G.; Nian, G.; Xiang, Y.; Qian, J.; Qu, S.</span><a class="paper-title" href="https://doi.org/10.1039/c8sm00678d">Mechanical characterization and modeling of sponge-reinforced hydrogel composites under compression</a><em>Soft Matter</em> · 2018 · Journal</li>
+<li><span class="authors">Mao, G.; <strong>Wu, L.</strong>; Fu, Y.; Liu, J.; Qu, S.</span><a class="paper-title" href="https://doi.org/10.1063/1.5021028">Voltage-controlled radial wrinkles of a trumpet-like dielectric elastomer structure</a><em>AIP Advances</em> · 2018 · Journal</li>
+<li><span class="authors">Mao, G.; <strong>Wu, L.</strong>; et al.</span><a class="paper-title" href="https://doi.org/10.1109/TMECH.2018.2864252">Design and Characterization of a Soft Dielectric Elastomer Peristaltic Pump Driven by Electromechanical Load</a><em>IEEE/ASME Transactions on Mechatronics</em> · 2018 · Journal</li>
+</ol>
+<h3 class="year">2017</h3><ol class="publications">
+<li><span class="authors">Mao, G.; <strong>Wu, L.</strong>; Liang, X.; Qu, S.</span><a class="paper-title" href="https://doi.org/10.1115/1.4037833">Morphology of voltage-triggered ordered wrinkles of a dielectric elastomer sheet</a><em>Journal of Applied Mechanics</em> · 2017 · Journal</li>
+</ol>
 </section>
-
 <section id="contact">
   <h2>Contact</h2>
   <p>Email: <a href="mailto:lei.wu@bristol.ac.uk">lei.wu@bristol.ac.uk</a></p>
+  <p><a href="https://orcid.org/0000-0002-0268-6304">ORCID</a> · <a href="https://github.com/Lei-Wu-brl">GitHub</a></p>
   <p>Website: <a href="https://www.softbiox.org">www.softbiox.org</a></p>
 </section>
 
+</main>
 <footer>
-  © 2025 SoftBioX Lab. All rights reserved.
+  © 2026 Lei Wu · SoftBioX.
 </footer>
 
 </body>
