@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Lei Wu | SoftBioX</title>
-  <meta name="description" content="Lei Wu — research in soft robotics, hydrogels, responsive materials and biomedical engineering.">
+  <meta name="description" content="Dr Lei Wu, University of Bristol. Research connecting soft materials and mechanics with soft robotics, biohybrid systems and biomedical engineering.">
   <style>
     :root { color-scheme: light; --ink:#183247; --accent:#146b70; }
     * { box-sizing: border-box; }
@@ -32,6 +32,20 @@
     .card { background:#f4f7f8; padding:1.3rem; border-radius:8px; border-top:3px solid #a8c8cb; }
     .card h3 { margin-top:0; }
     .card p { margin-bottom:0; }
+    .chinese-name { font-size:.48em; font-weight:400; letter-spacing:0; vertical-align:middle; color:#526574; }
+    .research-statement { font-size:clamp(1.3rem,3vw,1.8rem); font-weight:600; line-height:1.35; }
+    .affiliation { color:#526574; font-size:.95rem; }
+    .research-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin-top:1.5rem; }
+    .research-grid h3 { margin-top:1rem; }
+    .card p + p { margin-top:1rem; }
+    .highlight { display:flex; flex-direction:column; }
+    .highlight .eyebrow { margin:0 0 1rem; font-size:.72rem; }
+    .highlight a { margin-top:auto; padding-top:1rem; font-weight:600; }
+    .highlight p { margin:0 0 1rem; }
+    .background-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:2rem; }
+    .experience dt { font-weight:650; }
+    .experience dd { margin:.25rem 0 1.25rem; color:#526574; }
+    #research,#background { border-top:1px solid #dce5e9; }
     .year { margin-top:2rem; color:var(--accent); }
     .publications { padding-left:1.5rem; }
     .publications li { padding:.8rem 0 1rem .35rem; border-bottom:1px solid #e4eaed; }
@@ -43,7 +57,7 @@
     footer { background:#f4f7f8; padding:1.5rem; text-align:center; font-size:.9rem; color:#526574; }
     .skip { position:absolute; left:1rem; top:-10rem; padding:.5rem 1rem; background:white; z-index:5; }
     .skip:focus { top:1rem; }
-    @media(max-width:600px) { header { position:static; flex-direction:column; align-items:flex-start; padding:1rem 1.25rem; } nav { gap:.5rem 1rem; } section { padding:2.5rem 1.25rem; } .hero { padding:3rem 1.25rem; } .cards { grid-template-columns:1fr; } html { scroll-padding-top:1rem; } }
+    @media(max-width:800px) { header { position:static; flex-direction:column; align-items:flex-start; padding:1rem 1.25rem; } nav { gap:.5rem 1rem; } section { padding:2.5rem 1.25rem; } .hero { padding:3rem 1.25rem; } .cards,.research-grid,.background-grid { grid-template-columns:1fr; } html { scroll-padding-top:1rem; } }
     @media print { header, .skip { display:none; } section,.hero { padding:1rem 0; } .card,li { break-inside:avoid; } }
   </style>
 </head>
@@ -55,7 +69,9 @@
   <nav aria-label="Main navigation">
     <a href="#about">About</a>
     <a href="#research">Research</a>
+    <a href="#highlights">Selected work</a>
     <a href="#publications">Publications</a>
+    <a href="#background">Background</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -63,24 +79,41 @@
 <main id="main">
 <section class="hero" aria-labelledby="intro-title">
   <p class="eyebrow">SoftBioX · Personal research website</p>
-  <h1 id="intro-title">Lei Wu</h1>
+  <h1 id="intro-title">Lei Wu <span class="chinese-name" lang="zh">伍磊</span></h1>
   <p><strong>Research Associate · University of Bristol</strong></p>
-  <p>Exploring the interface between soft robotics, responsive materials and biomedical engineering.</p>
+  <p class="research-statement">From soft material mechanics to robotic and biomedical systems.</p>
+  <p>I study how material composition, structure and interfaces govern deformation, actuation and interaction with biological tissues.</p>
+  <p class="affiliation">SoftLab · Bristol Robotics Laboratory</p>
   <div class="links"><a href="#research">Research interests</a><a href="#publications">Publications</a><a href="https://scholar.google.com/citations?user=TrzvK3gAAAAJ&amp;hl=en">Google Scholar</a></div>
 </section>
 <section id="about">
-  <h2>About</h2>
-  <p>I am a Research Associate at the University of Bristol, working in soft robotics and biomedical engineering. My research spans hydrogels, responsive elastomers and biohybrid systems, exploring how material design and fabrication can enable soft actuation and biomedical applications.</p>
-  <p>SoftBioX brings together my research interests and publications across these areas.</p>
+  <p class="eyebrow">About</p>
+  <h2>Connecting materials, mechanics and function</h2>
+  <p>I am a Research Associate in SoftLab at the Bristol Robotics Laboratory, University of Bristol, working with Professor Jonathan Rossiter. My research combines solid mechanics, biomaterials and medical engineering to develop soft actuators, biohybrid systems and biomedical devices.</p>
+  <p>I investigate how material design and fabrication influence large deformation, interfacial bonding and mechanical durability, and how these behaviours translate into device function. My work spans highly entangled hydrogels, responsive elastomers and engineered muscle systems.</p>
+  <p>SoftBioX is my personal research website, bringing together the questions, publications and collaborations that connect these areas.</p>
 </section>
 
 <section id="research">
-  <h2>Research</h2>
+  <p class="eyebrow">Research</p>
+  <h2>Three connected research directions</h2>
+  <p>My approach links a physical question to a material or structural strategy, then tests the connection through experiments and device demonstrations.</p>
+  <div class="research-grid">
+    <article class="card"><span class="eyebrow">01 · Materials &amp; mechanics</span><h3>Soft materials and interfaces</h3><p>How can soft materials sustain large deformation while retaining strength and reliable interfaces?</p><p>I study hydrogels, elastomers and their composites, connecting material architecture with mechanical behaviour, bonding and cyclic durability.</p></article>
+    <article class="card"><span class="eyebrow">02 · Actuation</span><h3>Soft and biohybrid robotics</h3><p>How can material response and living muscle generate controlled motion?</p><p>My work explores soft hydraulic actuators, photoresponsive polymers and engineered skeletal muscle systems, linking structure and stimulus to actuation.</p></article>
+    <article class="card"><span class="eyebrow">03 · Biomedical engineering</span><h3>Devices and tissue interaction</h3><p>How can soft systems reproduce or interact with the mechanics of biological tissues?</p><p>I work on compliant medical devices and tissue models, with an interest in quantifying the relationship between material properties, anatomical structure and device performance.</p></article>
+  </div>
+</section>
+
+<section id="highlights">
+  <p class="eyebrow">Selected work</p>
+  <h2>Research in practice</h2>
+  <p>Four collaborative studies illustrate these connections. The linked publications provide the methods, results and full author records.</p>
   <div class="cards">
-    <div class="card"><h3>Highly Entangled Hydrogels</h3><p>Hydrogel design and fabrication for soft hydraulic actuation.</p></div>
-    <div class="card"><h3>Photoresponsive PU Elastomers</h3><p>Light-responsive materials and biohybrid muscle actuation.</p></div>
-    <div class="card"><h3>Interpenetrating Elastomer Networks</h3><p>Programmable soft materials for paediatric airway stents.</p></div>
-    <div class="card"><h3>Adaptive Bio-interfaces</h3><p>Scaffolds and material platforms for tissue engineering.</p></div>
+    <article class="card highlight"><p class="eyebrow">Hydrogels · IEEE RoboSoft 2026</p><h3>Printed hydrogels for hydraulic actuation</h3><p>Using highly entangled hydrogels and 3D printing to develop soft hydraulic actuators, connecting material mechanics with force generation and response.</p><a href="https://doi.org/10.1109/RoboSoft67810.2026.11522912">Read the actuator study <span aria-hidden="true">↗</span></a></article>
+    <article class="card highlight"><p class="eyebrow">Biohybrids · Interface Focus 2026</p><h3>Responsive fibres and living muscle</h3><p>Combining photoresponsive elastomer nanofibres with skeletal muscle to investigate how an engineered material environment can support biohybrid actuation.</p><a href="https://doi.org/10.1098/rsfs.2025.0053">Read the biohybrid study <span aria-hidden="true">↗</span></a></article>
+    <article class="card highlight"><p class="eyebrow">Medical devices · Advanced Functional Materials</p><h3>Programmable materials for a laryngeal stent</h3><p>Developing an interpenetrating elastomer network composite for a bespoke paediatric laryngeal stent, linking material design with a specific reconstructive need.</p><a href="https://doi.org/10.1002/adfm.202513861">Read the stent study <span aria-hidden="true">↗</span></a></article>
+    <article class="card highlight"><p class="eyebrow">Medical robotics · IEEE RoboSoft 2026</p><h3>Soft robotic support and simulation</h3><p>A soft robotic concept and simulator for studying female stress urinary incontinence, using a controlled experimental platform to investigate device function.</p><a href="https://doi.org/10.1109/RoboSoft67810.2026.11522823">Read the simulator study <span aria-hidden="true">↗</span></a></article>
   </div>
 </section>
 
@@ -124,8 +157,26 @@
 <li><span class="authors">Mao, G.; <strong>Wu, L.</strong>; Liang, X.; Qu, S.</span><a class="paper-title" href="https://doi.org/10.1115/1.4037833">Morphology of voltage-triggered ordered wrinkles of a dielectric elastomer sheet</a><em>Journal of Applied Mechanics</em> · 2017 · Journal</li>
 </ol>
 </section>
+<section id="background">
+  <p class="eyebrow">Background</p>
+  <h2>Research experience and education</h2>
+  <div class="background-grid">
+    <div><h3>Research experience</h3>
+      <dl class="experience"><dt>University of Bristol</dt><dd>Research Associate · SoftLab, Bristol Robotics Laboratory<br>Soft materials, soft actuation and biomedical robotic systems.</dd><dt>University College London</dt><dd>Postdoctoral research · 2023–2024<br>Medical device research, including an aspiration valve project.</dd></dl>
+    </div>
+    <div><h3>Education</h3>
+      <dl class="experience"><dt>University College London</dt><dd>PhD · Biomaterials and Medical Engineering · 2019–2023</dd><dt>Zhejiang University</dt><dd>MSc · Solid Mechanics</dd><dt>Dalian University of Technology</dt><dd>BEng</dd></dl>
+    </div>
+  </div>
+  <h3>Research collaboration and mentoring</h3>
+  <p>My work involves collaboration across materials science, robotics and biomedical engineering. Alongside experimental research, I contribute to research planning, manuscript development and doctoral student mentoring.</p>
+</section>
+
 <section id="contact">
-  <h2>Contact</h2>
+  <p class="eyebrow">Contact</p>
+  <h2>Research enquiries and collaboration</h2>
+  <p>I welcome discussions on soft material mechanics, hydrogel actuators, biohybrid systems and biomedical soft robotics.</p>
+  <p>SoftLab · Bristol Robotics Laboratory · University of Bristol</p>
   <p>Email: <a href="mailto:lei.wu@bristol.ac.uk">lei.wu@bristol.ac.uk</a></p>
   <p><a href="https://orcid.org/0000-0002-0268-6304">ORCID</a> · <a href="https://github.com/Lei-Wu-brl">GitHub</a></p>
   <p>Website: <a href="https://www.softbiox.org">www.softbiox.org</a></p>
